@@ -1,0 +1,2 @@
+22:44:18.036 [AWT-EventQueue-0] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ORA-00001: restricción única (HCE.SYS_C008314) violada
+

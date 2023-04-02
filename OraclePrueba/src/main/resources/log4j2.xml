@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <RollingFile name="hibernate" fileName="HibernateErrors.log" filePattern="hibernate-%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.p6spy" level="debug" additivity="false">
+            <AppenderRef ref="hibernate"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="hibernate"/>
+        </Root>
+    </Loggers>
+</Configuration>

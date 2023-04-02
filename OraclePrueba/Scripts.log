@@ -1,0 +1,6 @@
+insert into SGP_DEF_PLANTILLAS (nombre, id_plantilla) values ('tfyutfyut', 6543.0);
+;
+insert into SGP_DEF_PLANTILLAS (nombre, id_plantilla) values ('tfyutfyut', 65438.0);
+;
+insert into SGP_DEF_PLANTILLAS (nombre, id_plantilla) values ('tfyutfyut', 6.5438687E7);
+;

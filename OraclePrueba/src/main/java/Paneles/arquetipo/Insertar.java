@@ -130,8 +130,13 @@ public class Insertar extends JPanel {
 
 	private void Buscador_BotonActionPerformed(java.awt.event.ActionEvent evt) {
 		Double valorBuscador = Double.parseDouble(buscador.getText());
+		Plantilla plantillaSelect;
 
-		Plantilla plantillaSelect = Main.plantillaImplementacion.read(valorBuscador);
+		if((plantillaSelect = Main.plantillaImplementacion.read(valorBuscador)) == null){
+			JOptionPane.showMessageDialog(null, "El id no existe", "Error", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+			
 		idPlantilla_final.setText(plantillaSelect.getId() + "");
 	}
 

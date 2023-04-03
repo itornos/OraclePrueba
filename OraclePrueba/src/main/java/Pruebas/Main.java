@@ -20,18 +20,19 @@ public class Main {
 
 		Properties pro = new Properties();
 		try {
-			pro.load(new FileInputStream(new File("src/main/resources/Log.properties")));
+			//String v = System.getProperty("user.dir");
+			pro.load(new FileInputStream(new File("OraclePrueba/src/main/resources/Log.properties")));
 			querys = new FormatoLog(new File((String) pro.get("querysnofiltradas")),
 					new File((String) pro.get("querysfiltradas")));
 
 		} catch (Exception e) {
 		}
 
-		new Thread(querys).start();
 		plantillaImplementacion = new PlantillaDaoImplement();
 		arquetipoImplementacion = new ArquetipoDaoImplement();
 		arquetipoPlantillaImplementacion = new PlantillaArquetipoDaoImplement();
 		
 		new Principal().setVisible(true);
+		new Thread(querys).start();
 	}
 }

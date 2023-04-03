@@ -1,0 +1,138 @@
+#2023-04-03 18:07:59.111 | took 2ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:08:05.663 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:08:05.675 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:08:05.688 | took 0ms | statement | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values (?, ?)
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values ('ghxf', 54396.0);
+#2023-04-03 18:08:05.690 | took 0ms | commit | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:08:05.693 | took 1ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (?, ?, ?)
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (4.0, 54396.0, 1.0);
+#2023-04-03 18:08:05.693 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:08:07.561 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:08:07.562 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:08:07.565 | took 1ms | statement | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values (?, ?)
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values ('ghxf', 54396.0);
+#2023-04-03 18:08:07.575 | took 4ms | rollback | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:10:50.864 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:10:59.212 | took 1ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_PLANTILLAS (nombre, id_plantilla) values (?, ?)
+insert into SGP_DEF_PLANTILLAS (nombre, id_plantilla) values ('Prueba', 1.0);
+#2023-04-03 18:10:59.224 | took 11ms | commit | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:11:03.667 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:11:06.648 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:11:25.015 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:12:22.477 | took 0ms | statement | connection 3| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:12:38.115 | took 0ms | statement | connection 4| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:13:30.227 | took 0ms | statement | connection 5| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:13:30.227 | took 0ms | commit | connection 5| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:13:30.228 | took 0ms | statement | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values (?, ?)
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values ('Pruerba Arquetipo', 32.0);
+#2023-04-03 18:13:30.241 | took 12ms | commit | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:13:30.242 | took 0ms | statement | connection 5| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (?, ?, ?)
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (2.0, 32.0, 1.0);
+#2023-04-03 18:13:30.243 | took 0ms | commit | connection 5| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:15:17.391 | took 2ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:15:22.979 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:15:22.981 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:15:22.999 | took 0ms | statement | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values (?, ?)
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values ('tres', 54.0);
+#2023-04-03 18:15:23.012 | took 11ms | commit | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:15:23.013 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (?, ?, ?)
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (3.0, 54.0, 1.0);
+#2023-04-03 18:15:23.014 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:16:45.816 | took 3ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:16:50.762 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_
+select max(plantillaa0_.ID_INTERNO) as col_0_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_;
+#2023-04-03 18:16:50.763 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:16:50.778 | took 0ms | statement | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values (?, ?)
+insert into SGP_DEF_ARQUETIPOS (NOMBRE, ID_ARQUETIPO) values ('asd', 12.0);
+#2023-04-03 18:16:50.791 | took 11ms | commit | connection 1| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:16:50.796 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (?, ?, ?)
+insert into SGP_DEF_REL_PLANT_ARQUET (ID_INTERNO, ID_ARQUETIPO, ID_PLANTILLA) values (4.0, 12.0, 1.0);
+#2023-04-03 18:16:50.797 | took 0ms | commit | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+
+;
+#2023-04-03 18:21:44.646 | took 4ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantillaa0_.ID_ARQUETIPO as id_arquetipo2_2_0_, plantillaa0_.ID_PLANTILLA as id_plantilla3_2_0_, plantillaa0_.ID_INTERNO as id_interno1_2_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_ where plantillaa0_.ID_ARQUETIPO=? and plantillaa0_.ID_PLANTILLA=?
+select plantillaa0_.ID_ARQUETIPO as id_arquetipo2_2_0_, plantillaa0_.ID_PLANTILLA as id_plantilla3_2_0_, plantillaa0_.ID_INTERNO as id_interno1_2_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_ where plantillaa0_.ID_ARQUETIPO=1.0 and plantillaa0_.ID_PLANTILLA=0.0;
+#2023-04-03 18:21:47.675 | took 0ms | statement | connection 2| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantillaa0_.ID_ARQUETIPO as id_arquetipo2_2_0_, plantillaa0_.ID_PLANTILLA as id_plantilla3_2_0_, plantillaa0_.ID_INTERNO as id_interno1_2_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_ where plantillaa0_.ID_ARQUETIPO=? and plantillaa0_.ID_PLANTILLA=?
+select plantillaa0_.ID_ARQUETIPO as id_arquetipo2_2_0_, plantillaa0_.ID_PLANTILLA as id_plantilla3_2_0_, plantillaa0_.ID_INTERNO as id_interno1_2_0_ from SGP_DEF_REL_PLANT_ARQUET plantillaa0_ where plantillaa0_.ID_ARQUETIPO=2.0 and plantillaa0_.ID_PLANTILLA=0.0;
+#2023-04-03 18:21:53.813 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;
+#2023-04-03 18:21:58.228 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=2.0;
+#2023-04-03 18:25:09.167 | took 2ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=423.0;
+#2023-04-03 18:25:37.366 | took 2ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=14.0;
+#2023-04-03 18:25:44.141 | took 0ms | statement | connection 0| url jdbc:p6spy:oracle:thin:@localhost:1521:xe
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=?
+select plantilla0_.id_plantilla as id_plantilla1_1_0_, plantilla0_.nombre as nombre2_1_0_ from SGP_DEF_PLANTILLAS plantilla0_ where plantilla0_.id_plantilla=1.0;

@@ -25,6 +25,9 @@ public class Arquetipo {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.arquetipo", cascade=CascadeType.ALL)
 	private Set<PlantillaArquetipo> arquetipoPlantilla;
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.arquetipo")
+	private Set<ArquetipoDatoBasico> arquetipoDatobasico;
+	
 	public Arquetipo() {
 		this.id = 0;
 		this.nombre = "";

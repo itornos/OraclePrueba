@@ -14,8 +14,10 @@
     		
     	<mapping class="modeloHce.Plantilla" />
     	<mapping class="modeloHce.Arquetipo" />
+    	<mapping class="modeloHce.DatoBasico" />
     	<mapping class="modeloHce.PlantillaArquetipo" />
-    	
+    	<mapping class="modeloHce.ArquetipoDatoBasico" />
+    	<mapping class="modeloHce.TipoDatoBasico" />
     		
 	</session-factory>
 </hibernate-configuration>

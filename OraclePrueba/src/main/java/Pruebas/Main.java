@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import com.formdev.flatlaf.FlatDarkLaf;
+import com.formdev.flatlaf.FlatLightLaf;
+
 import DaoHce.ArquetipoDaoImplement;
 import DaoHce.PlantillaArquetipoDaoImplement;
 import DaoHce.PlantillaDaoImplement;
@@ -17,11 +20,12 @@ public class Main {
 	public static FormatoLog querys;
 	
 	public static void main(String[] args) {
-
+		FlatDarkLaf.install();//TEMA VISUAL
+		
 		Properties pro = new Properties();
 		try {
 			//String v = System.getProperty("user.dir");
-			pro.load(new FileInputStream(new File("OraclePrueba/src/main/resources/Log.properties")));
+			pro.load(new FileInputStream(new File("src/main/resources/Log.properties")));
 			querys = new FormatoLog(new File((String) pro.get("querysnofiltradas")),
 					new File((String) pro.get("querysfiltradas")));
 

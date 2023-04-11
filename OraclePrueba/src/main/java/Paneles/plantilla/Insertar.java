@@ -3,6 +3,7 @@ package Paneles.plantilla;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import Paneles.MensajeEmergente;
 import Paneles.Principal;
 import Pruebas.Main;
 import modeloHce.Plantilla;
@@ -34,7 +35,7 @@ public class Insertar extends JPanel {
 			id = Double.parseDouble(idPlantilla_Text.getText());
 			nombre = nombre_Text.getText();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "El id es un numero entero", "Error", JOptionPane.ERROR_MESSAGE);
+			new MensajeEmergente(0);
 			return;
 		}
 

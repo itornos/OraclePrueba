@@ -10,8 +10,6 @@ public class Principal extends javax.swing.JFrame{
     
     
 	public Principal() {    	
-		FlatDarkLaf.install();//TEMA VISUAL
-			
 		scrollPanelScript = new javax.swing.JScrollPane();
         script = new javax.swing.JTextArea();
         tablaPrincipal = new TablaPrincipal();

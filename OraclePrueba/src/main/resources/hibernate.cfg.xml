@@ -10,18 +10,12 @@
 	    <property name="hibernate.connection.url">jdbc:p6spy:oracle:thin:@localhost:1521:xe</property>
 	    <property name="connection.username">hce</property>
 	    <property name="connection.password">123</property>
-    
+    	<property name="show_sql">true</property>
+    		
     	<mapping class="modeloHce.Plantilla" />
     	<mapping class="modeloHce.Arquetipo" />
     	<mapping class="modeloHce.PlantillaArquetipo" />
-    	<mapping class="modeloHce.PlantillaArquetipoId" />
-		<!-- MAPEO DE CLASES 
-		<mapping class="modelo.Almacen" />
-		<mapping class="modelo.Existencias" />
-		<mapping class="modelo.Producto" />
-		<mapping class="modelo.Cliente" />
-		<mapping class="modelo.Factura" />
-		<mapping class="modelo.Pedido" />-->
-		
+    	
+    		
 	</session-factory>
 </hibernate-configuration>

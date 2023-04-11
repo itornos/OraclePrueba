@@ -44,6 +44,14 @@ public class PlantillaArquetipo {
 	public String getArquetipoNombre() {
 		return pk.getArquetipoNombre();
 	}
+	
+	public Arquetipo getArquetipo() {
+		return pk.getArquetipo();
+	}
+	
+	public Plantilla getPlantilla() {
+		return pk.getPlantilla();
+	}
 
 	public PlantillaArquetipoId getpk() {
 		return pk;

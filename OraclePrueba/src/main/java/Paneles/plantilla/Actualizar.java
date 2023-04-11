@@ -3,6 +3,7 @@ package Paneles.plantilla;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import Paneles.MensajeEmergente;
 import Paneles.Principal;
 import Pruebas.Main;
 import modeloHce.Plantilla;
@@ -20,7 +21,7 @@ public class Actualizar extends JPanel {
 	private void plantilla_Actualizar_Buscador_BotonActionPerformed(java.awt.event.ActionEvent evt) {
 		Double valorBuscador = Double.parseDouble(buscador.getText());
 
-		Plantilla plantillaSelect = Main.plantillaImplementacion.read(valorBuscador);
+		Plantilla plantillaSelect = Main.plantillaImplementacion.readId(valorBuscador);
 		idPlantilla_Text.setText(plantillaSelect.getId() + "");
 		nombre_Text.setText(plantillaSelect.getDescripcion());
 
@@ -34,7 +35,7 @@ public class Actualizar extends JPanel {
 			id = Double.parseDouble(idPlantilla_Text.getText());
 			nombre = nombre_Text.getText();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "El id es un numero entero", "Error", JOptionPane.ERROR_MESSAGE);
+			new MensajeEmergente(0);
 			return;
 		}
 

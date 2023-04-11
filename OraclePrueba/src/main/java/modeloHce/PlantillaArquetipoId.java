@@ -38,5 +38,13 @@ public class PlantillaArquetipoId implements Serializable{
 	public String getArquetipoNombre(){
 		return arquetipo.getDescripcion();
 	}
+	
+	public Arquetipo getArquetipo() {
+		return arquetipo;
+	}
+	
+	public Plantilla getPlantilla() {
+		return plantilla;
+	}
 }	
 	

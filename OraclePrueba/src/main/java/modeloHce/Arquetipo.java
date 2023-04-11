@@ -3,6 +3,7 @@ package modeloHce;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -21,7 +22,7 @@ public class Arquetipo {
 	@Column(name="NOMBRE")
 	private String nombre;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.arquetipo")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.arquetipo", cascade=CascadeType.ALL)
 	private Set<PlantillaArquetipo> arquetipoPlantilla;
 	
 	public Arquetipo() {

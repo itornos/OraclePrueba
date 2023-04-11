@@ -5,6 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,6 +19,10 @@ public class PlantillaDaoImplement {
 	private static final Logger LOGGER = LogManager.getLogger(Plantilla.class);
 	
 	public PlantillaDaoImplement() {
+		setup();
+	}
+	
+	public void setup() {
 		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
     	
 		try {
@@ -26,13 +33,17 @@ public class PlantillaDaoImplement {
 			System.out.println(ex);
 		    StandardServiceRegistryBuilder.destroy(registry);
 		}
-	}
+    }
  
     public void exit() {
         sessionFactory.close();
     }
  
-    // codigo para guardar un alumno
+    public void reset() {
+        exit();
+        setup();
+    }
+    
     public void create(Plantilla plantilla) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -44,10 +55,29 @@ public class PlantillaDaoImplement {
         session.close();
     }
     
-    // Codigo para leer un libro de la BD
-    public Plantilla read(Double id) { 
-    	return sessionFactory.openSession().get(Plantilla.class, id);
+    
+    public Plantilla readId(Double id) { 
+    	Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        
+    	Plantilla plantilla = session.get(Plantilla.class, id);
+    	
+    	return plantilla;
     }
+    
+    public List<Plantilla> read(String id, String campo) { 
+	    Session session = sessionFactory.openSession();
+        session.beginTransaction();
+     
+        List<Plantilla> query = session.createQuery("SELECT p FROM Plantilla p WHERE p."+ campo +" = '"+id+"'").getResultList();
+     
+        session.getTransaction().commit();
+        session.close();
+        
+        return query;
+    }
+	    
+	  
     
     public void refresh(Plantilla plantilla) {
 

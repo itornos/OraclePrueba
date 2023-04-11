@@ -16,11 +16,14 @@ public class ArquetipoDaoImplement {
 	private static final Logger LOGGER = LogManager.getLogger(Arquetipo.class);
 	
 	public ArquetipoDaoImplement() {
+		setup();
+	}
+	
+	public void setup(){
 		final StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure().build();
     	
 		try {
-		    sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-		    
+		    sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();   
 		    
 		} catch (Exception ex) {
 			System.out.println(ex);
@@ -30,6 +33,11 @@ public class ArquetipoDaoImplement {
  
     public void exit() {
         sessionFactory.close();
+    }
+    
+    public void reset() {
+    	exit();
+    	setup();
     }
  
     // codigo para guardar un alumno
@@ -47,18 +55,7 @@ public class ArquetipoDaoImplement {
     // Codigo para leer un libro de la BD
     public Arquetipo read(Double id) { 
     	return sessionFactory.openSession().get(Arquetipo.class, id);
-    }
-    
-    public void refresh(Arquetipo arquetipo) {
-
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        
-        session.refresh(arquetipo);
-        
-        session.close();
-    }
-    
+    }    
  
     // Codigo para modificar un alumnos en la BD
     public void update(Arquetipo arquetipo) {
@@ -71,5 +68,5 @@ public class ArquetipoDaoImplement {
         session.getTransaction().commit();
         session.close();
         
-    }  
+    }
 }

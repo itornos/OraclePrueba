@@ -29,7 +29,7 @@ public class FormatoLog implements Runnable{
 	@Override
 	public void run() {
 		String line;
-
+		
 		while (true) {
 			try {
 				if ((line = broriginal.readLine()) == null) {
@@ -37,10 +37,9 @@ public class FormatoLog implements Runnable{
 				}
 
 				if (line.contains(";")){
-					bwscript.append(line + "\n");
-					bwscript.flush();
-					
 					if (line.contains("insert") || line.contains("update") || line.contains("delete")) {
+						bwscript.append(line + "\n");
+						bwscript.flush();
 						Principal.script.append(line+"\n");
 					}
 				}

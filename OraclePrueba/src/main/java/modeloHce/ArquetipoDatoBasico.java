@@ -1,7 +1,5 @@
 package modeloHce;
 
-import java.io.Serializable;
-
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
 import javax.persistence.Column;

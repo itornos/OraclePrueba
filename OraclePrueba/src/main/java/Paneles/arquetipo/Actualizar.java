@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JButton;
@@ -54,7 +53,7 @@ public class Actualizar extends JPanel{
 				return;
 			}
 			
-			if((prueba = Main.plantillaImplementacion.readId(id)) == null){
+			if((prueba = Main.plantillaImplementacion.read(id)) == null){
 				new MensajeEmergente(1);
 				return;
 			}
@@ -114,7 +113,7 @@ public class Actualizar extends JPanel{
 			Double currentArquetipo = ((Arquetipo) idArquetipo_selector.getSelectedItem()).getId();
 			List<Arquetipo> listaArquetipos = new ArrayList<>();
 			
-			Plantilla plantilla = Main.plantillaImplementacion.readId(((Plantilla) idPlantilla_selector.getSelectedItem()).getId());
+			Plantilla plantilla = Main.plantillaImplementacion.read(((Plantilla) idPlantilla_selector.getSelectedItem()).getId());
 			
 			for (PlantillaArquetipo plantillaArquetipo : plantilla.getArquetipoPlantilla()) {
 				listaArquetipos.add(plantillaArquetipo.getArquetipo());
@@ -154,7 +153,7 @@ public class Actualizar extends JPanel{
 			    	break;
 			    }
 			}
-            nombre_Text.setText(arquetipo.getDescripcion());
+            nombre_Text.setText(arquetipo.getNombre());
         }
 	}
 	

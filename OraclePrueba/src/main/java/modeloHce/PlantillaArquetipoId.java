@@ -6,7 +6,10 @@ import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 
+import lombok.Data;
+
 @Embeddable
+@Data
 public class PlantillaArquetipoId implements Serializable{
 	
 	@MapsId
@@ -36,15 +39,7 @@ public class PlantillaArquetipoId implements Serializable{
 	}
 	
 	public String getArquetipoNombre(){
-		return arquetipo.getDescripcion();
-	}
-	
-	public Arquetipo getArquetipo() {
-		return arquetipo;
-	}
-	
-	public Plantilla getPlantilla() {
-		return plantilla;
+		return arquetipo.getNombre();
 	}
 }	
 	

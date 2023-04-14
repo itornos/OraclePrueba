@@ -1,7 +1,5 @@
 package modeloHce;
 
-import java.io.Serializable;
-
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
 import javax.persistence.Column;
@@ -10,13 +8,17 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name="SGP_DEF_REL_PLANT_ARQUET")
 @AssociationOverrides({
 	@AssociationOverride(name = "pk.plantilla", joinColumns = @JoinColumn(name = "ID_PLANTILLA")),
 	@AssociationOverride(name = "pk.arquetipo", joinColumns = @JoinColumn(name = "ID_ARQUETIPO")) 
 })
+@Data
 public class PlantillaArquetipo {
+	
 	@EmbeddedId
 	private PlantillaArquetipoId pk;
 	
@@ -51,9 +53,5 @@ public class PlantillaArquetipo {
 	
 	public Plantilla getPlantilla() {
 		return pk.getPlantilla();
-	}
-
-	public PlantillaArquetipoId getpk() {
-		return pk;
 	}
 }

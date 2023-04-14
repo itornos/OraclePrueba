@@ -8,13 +8,9 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.ListCellRenderer;
 
-import Paneles.MensajeEmergente;
-import Pruebas.Main;
 import modeloHce.Plantilla;
-import modeloHce.PlantillaArquetipo;
 import modeloHce.Arquetipo;
 
 public class Funcionalidades {
@@ -26,7 +22,7 @@ public class Funcionalidades {
 		jComboBox.setRenderer(new ListCellRenderer<Plantilla>() {
 		    @Override
 		    public Component getListCellRendererComponent(JList<? extends Plantilla> list, Plantilla value, int index, boolean isSelected, boolean cellHasFocus) {
-		        JLabel label = new JLabel(value.getId() + " " + value.getDescripcion()); // aquí se muestra el nombre de la plantilla
+		        JLabel label = new JLabel(value.getId() + " " + value.getNombre()); // aquí se muestra el nombre de la plantilla
 		        if (isSelected) {
 		            label.setBackground(list.getSelectionBackground());
 		            label.setForeground(list.getSelectionForeground());
@@ -48,7 +44,7 @@ public class Funcionalidades {
 		jComboBox.setRenderer(new ListCellRenderer<Arquetipo>() {
 		    @Override
 		    public Component getListCellRendererComponent(JList<? extends Arquetipo> list, Arquetipo value, int index, boolean isSelected, boolean cellHasFocus) {
-		        JLabel label = new JLabel(value.getId() + " " + value.getDescripcion()); // aquí se muestra el nombre de la plantilla
+		        JLabel label = new JLabel(value.getId() + " " + value.getNombre()); // aquí se muestra el nombre de la plantilla
 		        if (isSelected) {
 		            label.setBackground(list.getSelectionBackground());
 		            label.setForeground(list.getSelectionForeground());

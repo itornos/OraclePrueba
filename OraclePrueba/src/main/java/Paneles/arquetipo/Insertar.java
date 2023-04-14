@@ -9,15 +9,9 @@ import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-
-import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
 
 import Paneles.MensajeEmergente;
 import Pruebas.Main;
@@ -75,7 +69,7 @@ public class Insertar extends JPanel {
 				return;
 			}
 			
-			if((prueba = Main.plantillaImplementacion.readId(id)) == null){
+			if((prueba = Main.plantillaImplementacion.read(id)) == null){
 				new MensajeEmergente(1);
 				return;
 			}

@@ -1,7 +1,6 @@
 package Paneles.datoBasico;
 
 import java.awt.event.ActionEvent;
-import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -9,7 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Pruebas.Main;
 import modeloHce.TipoDatoBasico;
 
 public class Insertar extends JPanel {
@@ -53,7 +51,7 @@ public class Insertar extends JPanel {
 		tipoBasico_Label = new JLabel();
 		
 		tipoBasicoSelect = new JComboBox<TipoDatoBasico>();
-		tipoBasicoSelect = Funcionalidades.actualizarTipoDatBasico(tipoBasicoSelect, Main.tipoDatoBasicoDaoImplement.read());
+		//tipoBasicoSelect = Funcionalidades.actualizarTipoDatBasico(tipoBasicoSelect, Main.tipoDatoBasicoDaoImplement.read());
 		
 		
 		Nombre_Label.setText("Nombre");

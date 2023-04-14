@@ -11,8 +11,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name="SGP_DEF_ARQUETIPOS")
+@Data
 public class Arquetipo {
 
 	@Id
@@ -21,6 +24,30 @@ public class Arquetipo {
 	
 	@Column(name="NOMBRE")
 	private String nombre;
+
+	@Column(name="TIPO_CARDINALIDAD")
+	private String cardinalidad;
+
+	@Column(name="ESTATICO")
+	private String estatico;
+
+	@Column(name="ID_TILE")
+	private String idTitle;
+
+	@Column(name="FECHA_BAJA")
+	private String fechaBaja;
+
+	@Column(name="CAMPO_HL7")
+	private String campoHL7;
+
+	@Column(name="NOMBRE_MOSTRADO")
+	private String nombreMostrado;
+
+	@Column(name="OCULTAR_NOMBRE")
+	private String ocultarNombre;
+
+	@Column(name="NIVEL_TITULO")
+	private String nivelTitulo;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.arquetipo", cascade=CascadeType.ALL)
 	private Set<PlantillaArquetipo> arquetipoPlantilla;
@@ -48,29 +75,5 @@ public class Arquetipo {
 	
 	public void annadirArqPlant(PlantillaArquetipo p) {
 		arquetipoPlantilla.add(p);
-	}
-	
-	public double getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDescripcion() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Set<PlantillaArquetipo> getArquetipoPlantilla() {
-		return arquetipoPlantilla;
-	}
-
-	public void setArquetipoPlantilla(Set<PlantillaArquetipo> arquetipoPlantilla) {
-		this.arquetipoPlantilla = arquetipoPlantilla;
 	}
 }

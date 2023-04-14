@@ -8,11 +8,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name="SGP_DEF_DATOBASICO")
+@Data
 public class DatoBasico {
 
 	@Id
@@ -20,14 +25,45 @@ public class DatoBasico {
 	private double id;
 	
 	@Column(name="TIPO_BASICO")
-	private String tipo_basico;
+	private TipoDatoBasico tipobasico;
 	
-	@Column(name="NOMBRE")
+	@Column(name="TIPO_CARDINALIDAD")
+	private String tipoCardinalidad;
+	
+	@Column(name="nombre")
 	private String nombre;
+
+	@Column(name="FECHA_BAJA")
+	private String fechaBaja;
+
+	@Column(name="CAMPO_HL7")
+	private String campoHL7;
+
+	@Column(name="NOMBRE_MOSTRADO")
+	private String nombreMostrado;
+
+	@Column(name="OCULTAR_NOMBRE")
+	private String ocultarNombre;
+
+	@Column(name="ID_TILE")
+	private String idTitle;
+
+	@Column(name="UNIDAD")
+	private String unidad;
+
+	@Column(name="VER_FECHA")
+	private String verFecha;
 	
+	@Column(name="ESTATICO")
+	private String estatico;
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.datobasico", cascade=CascadeType.ALL)
 	private Set<ArquetipoDatoBasico> arquetipoDatoBasico;
 	
+	@ManyToOne()
+    @JoinColumn(name = "LISTA_VALORES")
+	private ListaValores listaValores;
+
 	public DatoBasico() {
 		this.id = 0;
 		this.nombre = "";
@@ -48,29 +84,5 @@ public class DatoBasico {
 	
 	public void annadirArqPlant(ArquetipoDatoBasico p) {
 		arquetipoDatoBasico.add(p);
-	}
-	
-	public double getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDescripcion() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Set<ArquetipoDatoBasico> getArquetipoDatoBasico() {
-		return arquetipoDatoBasico;
-	}
-
-	public void setArquetipoDatoBasico(Set<ArquetipoDatoBasico> arquetipoDatobasico) {
-		this.arquetipoDatoBasico = arquetipoDatobasico;
 	}
 }

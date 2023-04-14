@@ -5,13 +5,12 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.formdev.flatlaf.FlatLightLaf;
 
-import DaoHce.ArquetipoDaoImplement;
-import DaoHce.DatoBasicoDaoImplement;
-import DaoHce.PlantillaArquetipoDaoImplement;
-import DaoHce.PlantillaDaoImplement;
-import DaoHce.TipoDatoBasicoDaoImplement;
+import DaoImplement.ArquetipoDaoImplement;
+import DaoImplement.DatoBasicoDaoImplement;
+import DaoImplement.PlantillaArquetipoDaoImplement;
+import DaoImplement.PlantillaDaoImplement;
+import DaoImplement.TipoDatoBasicoDaoImplement;
 import Hilo.FormatoLog;
 import Paneles.Principal;
 
@@ -42,6 +41,7 @@ public class Main {
 		datoBasicoDaoImplement = new DatoBasicoDaoImplement();
 		tipoDatoBasicoDaoImplement = new TipoDatoBasicoDaoImplement();
 		
+
 		new Principal().setVisible(true);
 		new Thread(querys).start();
 	}

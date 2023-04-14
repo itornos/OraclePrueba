@@ -8,15 +8,9 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.ListCellRenderer;
 
-import Paneles.MensajeEmergente;
-import Pruebas.Main;
-import modeloHce.Plantilla;
-import modeloHce.PlantillaArquetipo;
 import modeloHce.TipoDatoBasico;
-import modeloHce.Arquetipo;
 
 public class Funcionalidades {
 	

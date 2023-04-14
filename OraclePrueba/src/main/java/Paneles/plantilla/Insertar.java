@@ -1,10 +1,8 @@
 package Paneles.plantilla;
 
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import Paneles.MensajeEmergente;
-import Paneles.Principal;
 import Pruebas.Main;
 import modeloHce.Plantilla;
 

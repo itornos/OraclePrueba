@@ -5,8 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name="SGP_TIPO_DATOBASICO")
+@Data
 public class TipoDatoBasico {
 	
 	@Id
@@ -15,20 +18,4 @@ public class TipoDatoBasico {
 	
 	@Column(name="DESCRIPCION")
 	String descripcion;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
 }

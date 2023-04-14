@@ -36,7 +36,7 @@ public class ArquetipoDatoBasicoId implements Serializable{
 	}
 	
 	public String getArquetipoNombre(){
-		return arquetipo.getDescripcion();
+		return arquetipo.getNombre();
 	}
 	
 	public Arquetipo getArquetipo() {

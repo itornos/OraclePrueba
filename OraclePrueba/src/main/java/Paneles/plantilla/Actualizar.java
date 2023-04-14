@@ -1,10 +1,8 @@
 package Paneles.plantilla;
 
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import Paneles.MensajeEmergente;
-import Paneles.Principal;
 import Pruebas.Main;
 import modeloHce.Plantilla;
 
@@ -21,9 +19,9 @@ public class Actualizar extends JPanel {
 	private void plantilla_Actualizar_Buscador_BotonActionPerformed(java.awt.event.ActionEvent evt) {
 		Double valorBuscador = Double.parseDouble(buscador.getText());
 
-		Plantilla plantillaSelect = Main.plantillaImplementacion.readId(valorBuscador);
+		Plantilla plantillaSelect = Main.plantillaImplementacion.read(valorBuscador);
 		idPlantilla_Text.setText(plantillaSelect.getId() + "");
-		nombre_Text.setText(plantillaSelect.getDescripcion());
+		nombre_Text.setText(plantillaSelect.getNombre());
 
 	}
 

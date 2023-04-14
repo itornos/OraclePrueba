@@ -1,9 +1,9 @@
 package modeloHce;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,7 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
+@Data
 @Table(name="SGP_DEF_PLANTILLAS")
 public class Plantilla {
 
@@ -21,6 +24,24 @@ public class Plantilla {
 	
 	@Column(name="nombre")
 	private String nombre;
+
+	@Column(name="editable_SGP")
+	private char editableSGP;
+
+	@Column(name="fecha_baja")
+	private Date fechaBaja;
+
+	@Column(name="campo_hl7")
+	private String campoHL7;
+
+	@Column(name="relacion_epicon")
+	private char relacionEpicon;
+	
+	@Column(name="tipo_cardinalidad")
+	private int tipoCardinalidad;
+
+	@Column(name="tiene_estado")
+	private char estado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.plantilla")
 	private Set<PlantillaArquetipo> arquetipoPlantilla;
@@ -45,29 +66,5 @@ public class Plantilla {
 	
 	public void annadirArqPlant(PlantillaArquetipo p) {
 		arquetipoPlantilla.add(p);
-	}
-	
-	public double getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getDescripcion() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Set<PlantillaArquetipo> getArquetipoPlantilla() {
-		return arquetipoPlantilla;
-	}
-
-	public void setArquetipoPlantilla(Set<PlantillaArquetipo> arquetipoPlantilla) {
-		this.arquetipoPlantilla = arquetipoPlantilla;
 	}
 }

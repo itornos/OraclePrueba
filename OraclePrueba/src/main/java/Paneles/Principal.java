@@ -1,7 +1,5 @@
 package Paneles;
 
-import com.formdev.flatlaf.FlatDarkLaf;
-
 public class Principal extends javax.swing.JFrame{
 	
     private TablaPrincipal tablaPrincipal;
